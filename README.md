@@ -1,6 +1,6 @@
 # SecuProbe Security Scan — GitHub Action
 
-[![Version](https://img.shields.io/badge/version-v1.0.0-blue)](https://github.com/Garconposey/secuprobe-scan-action/releases/tag/v1.0.0)
+[![Version](https://img.shields.io/badge/version-v1.0.0-blue)](https://github.com/Auxilh/secuprobe-scan-action/releases/tag/v1.0.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![SecuProbe](https://img.shields.io/badge/Powered%20by-SecuProbe-cyan)](https://secuprobe.io)
 
@@ -12,7 +12,7 @@ Automatically audit your website's security posture on every deploy. SecuProbe r
 
 ```yaml
 - name: SecuProbe Security Scan
-  uses: Garconposey/secuprobe-scan-action@v1.0.0
+  uses: Auxilh/secuprobe-scan-action@v1.0.0
   with:
     api_key: ${{ secrets.SECUPROBE_API_KEY }}
     url: https://your-app.com
@@ -67,7 +67,7 @@ Each scan produces a **SecuScore (0–100)** with a severity breakdown and remed
 ### Fail on any high or critical vulnerability
 ```yaml
 steps:
-  - uses: Garconposey/secuprobe-scan-action@v1.0.0
+  - uses: Auxilh/secuprobe-scan-action@v1.0.0
     with:
       api_key: ${{ secrets.SECUPROBE_API_KEY }}
       url: https://your-app.com
@@ -77,7 +77,7 @@ steps:
 ### Scan only — never fail the job
 ```yaml
 steps:
-  - uses: Garconposey/secuprobe-scan-action@v1.0.0
+  - uses: Auxilh/secuprobe-scan-action@v1.0.0
     with:
       api_key: ${{ secrets.SECUPROBE_API_KEY }}
       url: https://your-app.com
@@ -88,7 +88,7 @@ steps:
 ```yaml
 steps:
   - id: scan
-    uses: Garconposey/secuprobe-scan-action@v1.0.0
+    uses: Auxilh/secuprobe-scan-action@v1.0.0
     with:
       api_key: ${{ secrets.SECUPROBE_API_KEY }}
       url: https://your-app.com
@@ -112,7 +112,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: SecuProbe Security Scan
-        uses: Garconposey/secuprobe-scan-action@v1.0.0
+        uses: Auxilh/secuprobe-scan-action@v1.0.0
         with:
           api_key: ${{ secrets.SECUPROBE_API_KEY }}
           url: https://your-app.com
